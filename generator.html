@@ -123,13 +123,13 @@
         photo: document.getElementById('photo').value || "brak"
     };
 
-    // Zapisanie danych w localStorage
     localStorage.setItem('userData', JSON.stringify(userData));
-    console.log('Zapisano dane:', userData);  // Dodajemy logowanie do konsoli, by sprawdzić, czy dane są zapisane
+    console.log('Zapisano dane:', userData);  // Logowanie zapisanych danych
 
-    // Przekierowanie po zapisaniu
-    window.location.href = "logowanie.html";
+    // Dodajemy return, aby upewnić się, że kod nie zostanie przerwany
+    return window.location.href = "logowanie.html";
 }
+
 </scipt>
 </body>
 </html>
