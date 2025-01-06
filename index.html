@@ -4,39 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generator Danych</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        form {
-            max-width: 400px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        label {
-            font-weight: bold;
-        }
-        input, button, select {
-            padding: 10px;
-            font-size: 14px;
-            width: 100%;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: black;
+        color: yellow;
+    }
+    form {
+        max-width: 400px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    label {
+        font-weight: bold;
+        color: yellow;
+    }
+    input, button, select {
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+        background-color: black;
+        color: yellow;
+        border: 1px solid yellow;
+    }
+    button {
+        background-color: yellow;
+        color: black;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #f7c600;
+    }
+</style>
+
 </head>
 <body>
-    <h1>Generator Danych Użytkownika</h1>
+    <h1>xOb Generator</h1>
     <form id="dataForm">
         <label for="name">Imię</label>
         <input type="text" id="name" placeholder="Wpisz imię">
