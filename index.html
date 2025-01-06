@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+        .login-container {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+            color: #FFD700;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container button {
+            padding: 10px 20px;
+            background-color: #FFD700;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-container button:hover {
+            background-color: #e6c200;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="text" id="nickname" placeholder="Nick" required>
+            <input type="password" id="password" placeholder="Hasło" required>
+            <button type="button" onclick="validateLogin()">Zaloguj się</button>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const nickname = document.getElementById('nickname').value;
+            const password = document.getElementById('password').value;
+
+            if (nickname === 'sutonator' && password === '040125') {
+                window.location.href = 'generator.html';
+            } else {
+                alert('Nieprawidłowy nick lub hasło.');
+            }
+        }
+    </script>
+</body>
+</html>
