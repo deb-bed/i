@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Danych</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, button, select {
+            padding: 10px;
+            font-size: 14px;
+            width: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generator Danych Użytkownika</h1>
+    <form id="dataForm">
+        <label for="name">Imię</label>
+        <input type="text" id="name" placeholder="Wpisz imię">
+
+        <label for="surname">Nazwisko</label>
+        <input type="text" id="surname" placeholder="Wpisz nazwisko">
+
+        <label for="dob">Data urodzenia</label>
+        <input type="date" id="dob">
+
+        <label for="pesel">Numer PESEL</label>
+        <input type="text" id="pesel" placeholder="Wpisz PESEL">
+
+        <label for="adres">Adres zameldowania</label>
+        <input type="text" id="adres" placeholder="Wpisz adres">
+
+        <label for="postcode">Kod pocztowy</label>
+        <input type="text" id="postcode" placeholder="Wpisz kod pocztowy">
+
+        <label for="data_zameldowania">Data zameldowania</label>
+        <input type="date" id="data_zameldowania">
+
+        <label for="last_update">Ostatnia aktualizacja</label>
+        <input type="text" id="last_update" placeholder="Wpisz datę ostatniej aktualizacji">
+
+        <label for="series">Seria i numer dowodu</label>
+        <input type="text" id="series" placeholder="Wpisz serię i numer dowodu">
+
+        <label for="expire_date">Termin ważności</label>
+        <input type="date" id="expire_date">
+
+        <label for="data_wydania">Data wydania</label>
+        <input type="date" id="data_wydania">
+
+        <label for="organ_wydajacy">Organ wydający</label>
+        <input type="text" id="organ_wydajacy" placeholder="Wpisz organ wydający">
+
+        <label for="plec">Płeć</label>
+        <select id="plec">
+            <option value="Mężczyzna">Mężczyzna</option>
+            <option value="Kobieta">Kobieta</option>
+        </select>
+
+        <label for="birth_location">Miejsce urodzenia</label>
+        <input type="text" id="birth_location" placeholder="Wpisz miejsce urodzenia">
+
+        <label for="dad_surname">Nazwisko rodowe ojca</label>
+        <input type="text" id="dad_surname" placeholder="Wpisz nazwisko rodowe ojca">
+
+        <label for="mom_surname">Nazwisko rodowe matki</label>
+        <input type="text" id="mom_surname" placeholder="Wpisz nazwisko rodowe matki">
+
+        <label for="photo">Zdjęcie (URL)</label>
+        <input type="url" id="photo" placeholder="Wklej URL do zdjęcia">
+
+        <button type="button" onclick="saveData()">Zapisz dane</button>
+    </form>
+
+    <script>
+        function saveData() {
+            const userData = {
+                name: document.getElementById('name').value || "brak",
+                surname: document.getElementById('surname').value || "brak",
+                dob: document.getElementById('dob').value || "brak",
+                pesel: document.getElementById('pesel').value || "brak",
+                adres: document.getElementById('adres').value || "brak",
+                postcode: document.getElementById('postcode').value || "brak",
+                data_zameldowania: document.getElementById('data_zameldowania').value || "brak",
+                last_update: document.getElementById('last_update').value || "brak",
+                series: document.getElementById('series').value || "brak",
+                expire_date: document.getElementById('expire_date').value || "brak",
+                data_wydania: document.getElementById('data_wydania').value || "brak",
+                organ_wydajacy: document.getElementById('organ_wydajacy').value || "brak",
+                plec: document.getElementById('plec').value || "brak",
+                birth_location: document.getElementById('birth_location').value || "brak",
+                dad_surname: document.getElementById('dad_surname').value || "brak",
+                mom_surname: document.getElementById('mom_surname').value || "brak",
+                photo: document.getElementById('photo').value || "brak"
+            };
+
+            localStorage.setItem('userData', JSON.stringify(userData));
+            window.location.href = "id.html";
+        }
+    </script>
+</body>
+</html>
