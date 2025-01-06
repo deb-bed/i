@@ -102,34 +102,30 @@
         <button type="button" onclick="saveData()">Zapisz dane</button>
     </form>
 <script>
-   function saveData() {
-    const userData = {
-        name: document.getElementById('name').value || "brak",
-        surname: document.getElementById('surname').value || "brak",
-        dob: document.getElementById('dob').value || "brak",
-        pesel: document.getElementById('pesel').value || "brak",
-        adres: document.getElementById('adres').value || "brak",
-        postcode: document.getElementById('postcode').value || "brak",
-        data_zameldowania: document.getElementById('data_zameldowania').value || "brak",
-        last_update: document.getElementById('last_update').value || "brak",
-        series: document.getElementById('series').value || "brak",
-        expire_date: document.getElementById('expire_date').value || "brak",
-        data_wydania: document.getElementById('data_wydania').value || "brak",
-        organ_wydajacy: document.getElementById('organ_wydajacy').value || "brak",
-        plec: document.getElementById('plec').value || "brak",
-        birth_location: document.getElementById('birth_location').value || "brak",
-        dad_surname: document.getElementById('dad_surname').value || "brak",
-        mom_surname: document.getElementById('mom_surname').value || "brak",
-        photo: document.getElementById('photo').value || "brak"
-    };
+        function saveData() {
+            const userData = {
+                name: document.getElementById('name').value || "brak",
+                surname: document.getElementById('surname').value || "brak",
+                dob: document.getElementById('dob').value || "brak",
+                pesel: document.getElementById('pesel').value || "brak",
+                adres: document.getElementById('adres').value || "brak",
+                postcode: document.getElementById('postcode').value || "brak",
+                data_zameldowania: document.getElementById('data_zameldowania').value || "brak",
+                last_update: document.getElementById('last_update').value || "brak",
+                series: document.getElementById('series').value || "brak",
+                expire_date: document.getElementById('expire_date').value || "brak",
+                data_wydania: document.getElementById('data_wydania').value || "brak",
+                organ_wydajacy: document.getElementById('organ_wydajacy').value || "brak",
+                plec: document.getElementById('plec').value || "brak",
+                birth_location: document.getElementById('birth_location').value || "brak",
+                dad_surname: document.getElementById('dad_surname').value || "brak",
+                mom_surname: document.getElementById('mom_surname').value || "brak",
+                photo: document.getElementById('photo').value || "brak"
+            };
 
-    localStorage.setItem('userData', JSON.stringify(userData));
-    console.log('Zapisano dane:', userData);  // Logowanie zapisanych danych
-
-    // Dodajemy return, aby upewnić się, że kod nie zostanie przerwany
-    return window.location.href = "logowanie.html";
-}
-
-</scipt>
+            localStorage.setItem('userData', JSON.stringify(userData));
+            window.location.href = "logowanie.html";
+        }
+    </script>
 </body>
 </html>
