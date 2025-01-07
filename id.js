@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
             setElementText('userAdres', data.adres);
             setElementText('userPostcode', data.postcode);
             setElementText('userdata_zameldowania', data.data_zameldowania);
-            setElementText('userlast_update', data.last_update);
             setElementText('userSeria', data.series);
             setElementText('userData_waznosci', data.expire_date);
             setElementText('userData_wydania', data.data_wydania);
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             setElementText('userData_wydania2', data.data_wydania);
             setElementText('usermom_name', data.mom_name);
             setElementText('userdad_name', data.dad_name);
-            setElementText('userRodowe', data.surname);
+            setElementText('userSurname2', data.surname);
             setElementImage('userPhoto', data.photo);
         } else {
             console.error("Brak danych użytkownika w localStorage.");
