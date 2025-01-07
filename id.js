@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
             setElementText('userOrgan', data.organ_wydajacy);
             setElementText('userPlec', data.plec);
             setElementText('userLocation', data.birth_location);
-            setElementText('dadSurname', data.dad_surname);
-            setElementText('momSurname', data.mom_surname);
+            setElementText('userDadSurname', data.dad_surname);
+            setElementText('userMomSurname', data.mom_surname);
             setElementText('userSeria2', data.series);
             setElementText('userData_waznosci2', data.expire_date);
             setElementText('userData_wydania2', data.data_wydania);
