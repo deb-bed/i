@@ -90,9 +90,15 @@
         <label for="dad_surname">Nazwisko rodowe ojca</label>
         <input type="text" id="dad_surname" placeholder="Wpisz nazwisko rodowe ojca">
 
+        <label for="dad_name">Imię ojca</label>
+        <input type="text" id="dad_name" placeholder="Wpisz imię ojca">
+
         <label for="mom_surname">Nazwisko rodowe matki</label>
         <input type="text" id="mom_surname" placeholder="Wpisz nazwisko rodowe matki">
-
+        
+        <label for="mom_name">Imię matki</label>
+        <input type="text" id="dad_name" placeholder="Wpisz imię matki
+        
         <label for="photo">Zdjęcie (URL)</label>
         <input type="url" id="photo" placeholder="Wklej URL do zdjęcia">
 
@@ -115,7 +121,9 @@
                 plec: document.getElementById('plec').value || "brak",
                 birth_location: document.getElementById('birth_location').value || "brak",
                 dad_surname: document.getElementById('dad_surname').value || "brak",
+                dad_name: document.getElementById('dad_name').value ||"brak",
                 mom_surname: document.getElementById('mom_surname').value || "brak",
+                mom_name: document.getElementById('mom_name').value ||"brak",
                 photo: document.getElementById('photo').value || "brak"
             };
 
